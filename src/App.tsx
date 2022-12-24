@@ -4,6 +4,7 @@ import Test from './views/00-test'
 import ProgressSteps from './views/02-progress-steps'
 import RotatingNavAnimation from './views/03-rotating-nav-animation'
 import HiddenSearchWidget from './views/04-hidden-search-widget'
+import BlurryLoading from './views/05-blurry-loading'
 
 function App() {
   let element = useRoutes([
@@ -26,6 +27,10 @@ function App() {
     {
       path: '/04-hidden-search-widget',
       element: <HiddenSearchWidget />,
+    },
+    {
+      path: '/05-blurry-loading',
+      element: <BlurryLoading />,
     },
   ])
 
