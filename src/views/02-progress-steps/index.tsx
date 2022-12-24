@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import './index.css'
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -53,7 +52,7 @@ const Progress = styled.div`
   transform: translateY(-50%);
   height: 4px;
   width: 0;
-  z-index: -1;
+  z-index: 1;
   transition: 0.4s ease;
 `
 
@@ -72,6 +71,7 @@ const Circle = styled.div`
         ? 'var(--line-border-fill)'
         : 'var(--line-border-empty)'};
   transition: 0.4s ease;
+  z-index:1;
 `
 
 const Button = styled.button`
@@ -103,7 +103,6 @@ const circleList: CircleItem[] = [
 
 export default function ProgressSteps() {
   const [circles, setCircles] = useState<CircleItem[]>(circleList)
-  const progressRef = useRef()
 
   function handlePrevClick() {
     // TODO:ts中缺少一些方法，比如findLastIndex，而lastIndexOf需要严格匹配

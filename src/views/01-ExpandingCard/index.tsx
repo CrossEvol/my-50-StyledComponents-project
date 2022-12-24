@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './index.css'
 import styled, { keyframes } from 'styled-components'
 
 const ExpandingCardBody = styled.div`
