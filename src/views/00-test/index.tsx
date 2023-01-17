@@ -34,6 +34,18 @@ const ContentMessage = styled.div`
   margin: 0 auto;
 `
 
+const Parent = styled.div`
+  &:first-child {
+    background: blue;
+  }
+`
+
+const Child = styled.div`
+  & + & {
+    color: red;
+  }
+`
+
 export default function Test() {
   const contentRef = useRef<HTMLDivElement>(null)
 
@@ -58,6 +70,11 @@ export default function Test() {
           <ContentMessage />
         </Content>
       </Container>
+      <hr />
+      <Parent>
+        <Child>Child 1</Child>
+        <Child>Child 2</Child>
+      </Parent>
     </>
   )
 }

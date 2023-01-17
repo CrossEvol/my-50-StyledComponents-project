@@ -5,6 +5,9 @@ import ProgressSteps from './views/02-progress-steps'
 import RotatingNavAnimation from './views/03-rotating-nav-animation'
 import HiddenSearchWidget from './views/04-hidden-search-widget'
 import BlurryLoading from './views/05-blurry-loading'
+import ScrollAnimation from './views/06-scroll-animation'
+import SplitLandingPage from './views/07-split-landing-page'
+import FormInputWave from './views/08-form-input-wave'
 
 function App() {
   let element = useRoutes([
@@ -31,6 +34,18 @@ function App() {
     {
       path: '/05-blurry-loading',
       element: <BlurryLoading />,
+    },
+    {
+      path: '/06-scroll-animation',
+      element: <ScrollAnimation />,
+    },
+    {
+      path: '07-split-landing-page',
+      element: <SplitLandingPage />,
+    },
+    {
+      path: '08-form-input-wave',
+      element: <FormInputWave />,
     },
   ])
 
