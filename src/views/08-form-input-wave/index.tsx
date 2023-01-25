@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 
 const FormInputWaveBody = styled.div`
+  @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
   background-color: steelblue;
   color: #fff;
   font-family: 'Muli', sans-serif;

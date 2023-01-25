@@ -8,6 +8,10 @@ import BlurryLoading from './views/05-blurry-loading'
 import ScrollAnimation from './views/06-scroll-animation'
 import SplitLandingPage from './views/07-split-landing-page'
 import FormInputWave from './views/08-form-input-wave'
+import SoundBoard from './views/09-sound-board'
+import DadJokes from './views/10-dad-jokes'
+import EventKeyCodes from './views/11-event-keyCodes'
+import FaqCollapse from './views/12-faq-collapse'
 
 function App() {
   let element = useRoutes([
@@ -46,6 +50,22 @@ function App() {
     {
       path: '08-form-input-wave',
       element: <FormInputWave />,
+    },
+    {
+      path: '09-sound-board',
+      element: <SoundBoard />,
+    },
+    {
+      path: '10-dad-jokes',
+      element: <DadJokes />,
+    },
+    {
+      path: '11-event-keyCodes',
+      element: <EventKeyCodes />,
+    },
+    {
+      path: '12-faq-collapse',
+      element: <FaqCollapse />,
     },
   ])
 
