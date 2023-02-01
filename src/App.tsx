@@ -12,6 +12,7 @@ import SoundBoard from './views/09-sound-board'
 import DadJokes from './views/10-dad-jokes'
 import EventKeyCodes from './views/11-event-keyCodes'
 import FaqCollapse from './views/12-faq-collapse'
+import RandomChoicePicker from './views/13-random-choice-picker'
 
 function App() {
   let element = useRoutes([
@@ -66,6 +67,10 @@ function App() {
     {
       path: '12-faq-collapse',
       element: <FaqCollapse />,
+    },
+    {
+      path: '13-random-choice-picker',
+      element: <RandomChoicePicker />,
     },
   ])
 
