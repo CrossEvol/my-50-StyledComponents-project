@@ -13,6 +13,8 @@ import DadJokes from './views/10-dad-jokes'
 import EventKeyCodes from './views/11-event-keyCodes'
 import FaqCollapse from './views/12-faq-collapse'
 import RandomChoicePicker from './views/13-random-choice-picker'
+import AnimatedNavigation from './views/14-animated-navigation'
+import IncrementingCounter from './views/15-incrementing-counter'
 
 function App() {
   let element = useRoutes([
@@ -71,6 +73,14 @@ function App() {
     {
       path: '13-random-choice-picker',
       element: <RandomChoicePicker />,
+    },
+    {
+      path: '14-animated-navigation',
+      element: <AnimatedNavigation />,
+    },
+    {
+      path: '15-incrementing-counter',
+      element: <IncrementingCounter />,
     },
   ])
 
