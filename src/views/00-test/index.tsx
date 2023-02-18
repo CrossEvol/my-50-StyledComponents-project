@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -46,8 +46,31 @@ const Child = styled.div`
   }
 `
 
+const BlockOne = styled.div`
+  width: 300px;
+  height: 100px;
+  background-color: red;
+  border: 1px solid #000;
+`
+
+const BlockTwo = styled.div`
+  width: 150px;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid #000;
+`
+const BlockLeftTop = styled.div`
+  z-index: 10;
+  width: 400px;
+  height: 400px;
+  background-color: green;
+  margin-left: 150px;
+  margin-top: 250px;
+`
+
 export default function Test() {
   const contentRef = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLDivElement | null>(null)
 
   function handleScrollToBottom() {
     const realHeight = contentRef.current?.scrollHeight as number
@@ -58,9 +81,25 @@ export default function Test() {
     }
   }
 
+  useEffect(() => {
+    // document.addEventListener('mousedown', (e: MouseEvent) => {
+    //   console.log(`x:${e.offsetX},y:${e.offsetY}`)
+    // })
+
+    return () => {}
+  }, [])
+
   return (
     <>
       <Container>
+        <BlockLeftTop
+          ref={ref}
+          onMouseDown={(e: React.MouseEvent<HTMLDivElement>) => {
+            console.log(`x:${e.nativeEvent.offsetX},y:${e.nativeEvent.offsetY}`)
+            console.log(ref.current?.offsetLeft)
+            console.log(ref.current?.offsetTop)
+          }}
+        ></BlockLeftTop>
         {/* <Block className="active">Test1</Block>
         <Block>Test2</Block>
         <Block className="active">Test1</Block>
@@ -75,6 +114,11 @@ export default function Test() {
         <Child>Child 1</Child>
         <Child>Child 2</Child>
       </Parent>
+      <hr />
+      <div>
+        <BlockOne></BlockOne>
+        <BlockTwo onClick={() => window.location.reload()}></BlockTwo>
+      </div>
     </>
   )
 }

@@ -15,6 +15,13 @@ import FaqCollapse from './views/12-faq-collapse'
 import RandomChoicePicker from './views/13-random-choice-picker'
 import AnimatedNavigation from './views/14-animated-navigation'
 import IncrementingCounter from './views/15-incrementing-counter'
+import DrinkWater from './views/16-drink-water'
+import MovieApp from './views/17-movie-app'
+import BackgroundSlider from './views/18-background-slider'
+import ThemeClock from './views/19-theme-clock'
+import ButtonRippleEffect from './views/20-button-ripple-effect'
+import DragAndDrop from './views/21-drag-and-drop'
+import DrawingApp from './views/22-drawing-app'
 
 function App() {
   let element = useRoutes([
@@ -81,6 +88,34 @@ function App() {
     {
       path: '15-incrementing-counter',
       element: <IncrementingCounter />,
+    },
+    {
+      path: '16-drink-water',
+      element: <DrinkWater />,
+    },
+    {
+      path: '17-movie-app',
+      element: <MovieApp />,
+    },
+    {
+      path: '18-background-slider',
+      element: <BackgroundSlider />,
+    },
+    {
+      path: '19-theme-clock',
+      element: <ThemeClock />,
+    },
+    {
+      path: '20-button-ripple-effect',
+      element: <ButtonRippleEffect />,
+    },
+    {
+      path: '21-drag-and-drop',
+      element: <DragAndDrop />,
+    },
+    {
+      path: '22-drawing-app',
+      element: <DrawingApp />,
     },
   ])
 
