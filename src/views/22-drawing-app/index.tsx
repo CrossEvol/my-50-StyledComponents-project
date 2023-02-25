@@ -111,6 +111,7 @@ export default function DrawingApp() {
     setSize(size - 5 < 5 ? 5 : size - 5)
   }
 
+  // TODO:尺寸需要搞明白后回来处理
   const handleMouseMove = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const offsetX = e.nativeEvent.offsetX
     const offsetY = e.nativeEvent.offsetY
@@ -130,12 +131,12 @@ export default function DrawingApp() {
     }
   }
 
+  // TODO:尺寸需要搞明白后回来处理
   const handleMouseDown = (e: React.MouseEvent<HTMLCanvasElement>) => {
-    console.log(`x:${e.nativeEvent.offsetX},y:${e.nativeEvent.offsetY}`)
     const offsetX = e.nativeEvent.offsetX
     const offsetY = e.nativeEvent.offsetY
     setIsPressed(true)
-    setPosition({ x: undefined, y: undefined })
+    setPosition({ x: offsetX, y: offsetY })
   }
 
   const handleClickClearButton = () => {
