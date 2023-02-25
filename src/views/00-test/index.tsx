@@ -1,5 +1,13 @@
 import React, { useEffect, useRef } from 'react'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  .red {
+    background-color: red;
+    width: 200px;
+    height: 50px;
+  }
+`
 
 const Container = styled.div`
   display: flex;
@@ -92,6 +100,8 @@ export default function Test() {
   return (
     <>
       <Container>
+        <GlobalStyle />
+        <div className="red"></div>
         <BlockLeftTop
           ref={ref}
           onMouseDown={(e: React.MouseEvent<HTMLDivElement>) => {

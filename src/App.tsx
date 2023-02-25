@@ -22,6 +22,8 @@ import ThemeClock from './views/19-theme-clock'
 import ButtonRippleEffect from './views/20-button-ripple-effect'
 import DragAndDrop from './views/21-drag-and-drop'
 import DrawingApp from './views/22-drawing-app'
+import KineticLoader from './views/23-kinetic-loader'
+import ContentPlaceholder from './views/24-content-placeholder'
 
 function App() {
   let element = useRoutes([
@@ -116,6 +118,18 @@ function App() {
     {
       path: '22-drawing-app',
       element: <DrawingApp />,
+    },
+    {
+      path: '22-drawing-app',
+      element: <DrawingApp />,
+    },
+    {
+      path: '23-kinetic-loader',
+      element: <KineticLoader />,
+    },
+    {
+      path: '24-content-placeholder',
+      element: <ContentPlaceholder />,
     },
   ])
 
